@@ -15,14 +15,14 @@ with open("requirements.txt", encoding="utf-8") as f:
 
 
 setup(
-    name="knowledge-storm",
-    version="1.1.1",
-    author="Yijia Shao, Yucheng Jiang",
-    author_email="shaoyj@stanford.edu, yuchengj@stanford.edu",
-    description="STORM: A language model-powered knowledge curation engine.",
+    name="ig-finder",
+    version="0.1.0",
+    author="IG-Finder Development Team",
+    author_email="your.email@example.com",
+    description="IG-Finder: Innovation Gap Identification Framework for Scientific Research",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/stanford-oval/storm",
+    url="https://github.com/yurui12138/storm",
     license="MIT License",
     packages=find_packages(),
     classifiers=[
@@ -35,4 +35,17 @@ setup(
     ],
     python_requires=">=3.10",
     install_requires=requirements,
+    entry_points={
+        'console_scripts': [
+            'ig-finder=knowledge_storm.ig_finder.cli:main',
+        ],
+    },
+    keywords=[
+        'innovation gap',
+        'scientific research',
+        'knowledge curation',
+        'cognitive baseline',
+        'literature analysis',
+        'ai research assistant',
+    ],
 )
