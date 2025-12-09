@@ -1,82 +1,130 @@
-# IG-Finder: Innovation Gap Identification through Immunological Self-Nonself Recognition in Scientific Knowledge
+# IG-Finder: Identifying Verifiable Innovation Gaps through Cognitive Baseline Modeling and Immune-Inspired Self-Nonself Recognition
 
-## Abstract (Academic Conference Version)
+## Abstract (Academic Style - 250 words)
 
-**Problem Context**: Automatic review generation systems increasingly serve as critical tools for scientific knowledge synthesis. However, existing systems predominantly suffer from "lagging reviews" - a systematic failure to identify and articulate genuine research innovations. This deficiency stems from the absence of explicit cognitive baseline modeling, which prevents systems from distinguishing between incremental continuations and paradigm-shifting innovations.
+Automatic review generation systems face a critical challenge: the inability to identify true innovations, resulting in "lagging reviews" that fail to capture cutting-edge research developments. This limitation stems from the absence of explicit domain cognitive baseline modeling. We present **IG-Finder** (Innovation Gap Finder), a novel framework that addresses this challenge by adapting the immune system's self-nonself recognition mechanism to scientific knowledge modeling.
 
-**Core Innovation**: We present IG-Finder (Innovation Gap Finder), a novel AI framework that adapts the biological immune system's self-nonself recognition mechanism to scientific knowledge modeling. Unlike traditional approaches that treat all recent research uniformly, IG-Finder constructs an explicit "Cognitive Self" from established review papers and systematically identifies "Innovative Non-self" - emerging research clusters that deviate from consensus while maintaining internal logical coherence.
+IG-Finder operates through a two-phase process. In Phase 1 (Cognitive Self Construction), the system retrieves and analyzes review papers to extract structured consensus knowledge, constructing a cognitive baseline that represents the domain's "self"—established paradigms, methods, and boundaries. This baseline is organized into a dynamic hierarchical mind map with temporal tracking and multi-dimensional metadata. In Phase 2 (Innovative Non-self Identification), IG-Finder retrieves frontier research papers and performs multi-perspective deviation analysis using expert agents specialized in methodology, data paradigms, theoretical frameworks, and applications. Papers exhibiting significant deviations from the cognitive baseline are grouped into innovation clusters through validation of internal logical coherence, representing the "innovative nonself."
 
-**Technical Approach**: IG-Finder operates through a two-phase pipeline: (1) **Cognitive Self Construction** retrieves and analyzes review papers to extract research paradigms, mainstream methodologies, and knowledge boundaries, organizing them into a dynamic hierarchical mind map; (2) **Innovative Non-self Identification** retrieves frontier research papers and employs multi-perspective expert analysis to detect deviations from the cognitive baseline, followed by cluster-based validation to distinguish isolated anomalies from systematic innovations. The framework tracks knowledge evolution through five distinct states (consensus, continuation, deviation, potential gap, innovation) and generates comprehensive innovation gap reports structured for downstream review systems.
+Unlike existing systems that generate reviews directly from topic descriptions, IG-Finder produces comprehensive innovation gap reports that serve as enhanced input for downstream review generation systems. Our framework introduces five key innovations: (1) explicit cognitive baseline modeling from review literature, (2) multi-perspective deviation analysis with expert agents, (3) cluster-based innovation validation ensuring internal coherence, (4) dynamic mind map evolution tracking knowledge states, and (5) structured gap reports with evidence-grounded recommendations.
 
-**Key Results**: Our framework addresses three critical challenges in automatic review generation: (a) It establishes verifiable innovation detection through explicit baseline modeling, eliminating reliance on implicit novelty assessment; (b) It reduces false positives via cluster coherence validation, requiring multiple papers to exhibit consistent deviation patterns; (c) It provides structured, multi-dimensional gap analysis (methodology, data paradigm, theoretical framework, application domain) rather than unstructured topic descriptions. Preliminary deployment demonstrates that IG-Finder's innovation gap reports enable downstream review systems to generate more insightful analyses, with significant improvements in identifying and contextualizing emerging research directions.
+Experimental evaluation demonstrates IG-Finder's effectiveness in identifying verifiable innovation clusters and generating actionable insights for review systems, addressing the persistent "lagging review" problem in automatic literature analysis.
 
-**Significance**: This work establishes a new paradigm for scientific knowledge analysis by introducing immunological principles to AI-driven research synthesis. IG-Finder's explicit cognitive baseline modeling and multi-perspective deviation analysis provide a theoretically grounded, empirically validatable approach to innovation identification. The framework's structured outputs (cognitive baseline summaries, innovation clusters, gap analyses, evolution narratives, and actionable recommendations) transform automatic review generation from information aggregation to genuine knowledge evolution tracking. By addressing the "lagging review" problem, IG-Finder enables AI systems to serve not merely as literature organizers but as active participants in accelerating scientific discovery.
-
-**Contributions**: (1) We introduce the first framework to explicitly model domain cognitive baselines through automated review synthesis; (2) We adapt immunological self-nonself recognition to systematic innovation detection in scientific literature; (3) We develop a multi-perspective deviation analysis methodology that captures innovation across multiple dimensions; (4) We propose cluster-based validation as a principled approach to distinguish genuine innovations from isolated outliers; (5) We design a dynamic mind map representation that tracks knowledge evolution from established consensus to emerging innovations; (6) We demonstrate how structured innovation gap reports can enhance downstream automatic review systems.
-
-**Keywords**: Automatic Review Generation, Innovation Detection, Cognitive Baseline Modeling, Self-Nonself Recognition, Multi-Perspective Analysis, Knowledge Evolution, Scientific Literature Mining, AI for Science
+**Keywords**: Literature Analysis, Innovation Detection, Knowledge Modeling, Automatic Review Generation, Multi-Agent Systems, Large Language Models
 
 ---
 
-## Alternative Version: Short Abstract (250 words)
+## Abstract (SIGIR/WWW/ACL Style - 300 words)
 
-Automatic review generation systems fail to identify genuine research innovations due to the absence of cognitive baseline modeling, leading to "lagging reviews" that miss paradigm shifts. We present IG-Finder, an AI framework that applies the immune system's self-nonself recognition to scientific knowledge. 
+### Title
+**IG-Finder: Bridging the Innovation Gap in Automatic Literature Review Through Immune-Inspired Cognitive Baseline Modeling**
 
-IG-Finder operates in two phases: First, it constructs a "Cognitive Self" by analyzing review papers to extract consensus knowledge - research paradigms, methods, and boundaries - organizing them into a dynamic mind map. Second, it identifies "Innovative Non-self" by retrieving frontier papers and performing multi-perspective deviation analysis against the baseline, then validating innovations through cluster coherence. 
+### Abstract
 
-Unlike traditional systems that treat all recent research uniformly, IG-Finder explicitly distinguishes five evolution states (consensus, continuation, deviation, potential gap, innovation), enabling systematic identification of genuine innovations. The framework produces comprehensive innovation gap reports including cognitive baseline summaries, validated innovation clusters, multi-dimensional gap analyses, knowledge evolution narratives, and structured recommendations for downstream review systems.
+**Motivation**: Automatic review generation systems have achieved significant progress in synthesizing research literature, yet they consistently fail to identify genuine innovations, producing reviews that lag behind cutting-edge developments. This fundamental limitation arises from the absence of explicit domain cognitive baseline modeling—systems lack understanding of what constitutes established consensus versus novel deviations.
 
-Key innovations include: (1) explicit cognitive baseline modeling from automated review synthesis, (2) immunologically-inspired self-nonself recognition for innovation detection, (3) multi-perspective analysis across methodology, data, theory, and application dimensions, (4) cluster-based validation to filter isolated outliers, and (5) dynamic mind map tracking of knowledge evolution. IG-Finder transforms automatic review generation from information aggregation to genuine knowledge evolution tracking, addressing the critical "lagging review" problem and enabling AI systems to accelerate scientific discovery.
+**Problem**: We formalize the "lagging review" problem: given a research topic, how can we automatically identify verifiable innovation gaps that represent coherent deviations from established consensus? This requires (1) constructing a comprehensive cognitive baseline capturing domain consensus, (2) detecting frontier research that meaningfully deviates from this baseline, and (3) validating innovation through logical coherence rather than mere novelty.
 
----
+**Approach**: We present IG-Finder, a framework inspired by the immune system's self-nonself recognition mechanism. IG-Finder constructs the cognitive "self" through multi-paper consensus extraction from review literature, organizing knowledge into a dynamic hierarchical mind map with evolution state tracking. Frontier research papers are analyzed through multi-perspective expert agents (methodology, data, theory, application) to identify deviations from the baseline. Papers with coherent deviation patterns are grouped into validated innovation clusters representing the "innovative nonself."
 
-## Alternative Version: Extended Abstract (600 words)
+**Key Contributions**: (1) A novel cognitive baseline construction method extracting structured consensus from review papers with temporal and dimensional tracking. (2) Multi-perspective deviation analysis using specialized expert agents for comprehensive innovation assessment. (3) Cluster-based innovation validation ensuring internal coherence through LLM-assisted reasoning. (4) Dynamic mind map evolution mechanism tracking five knowledge states (consensus, continuation, deviation, innovation, potential gap). (5) Comprehensive innovation gap reports providing structured, evidence-grounded input for downstream review systems.
 
-### Background and Motivation
-
-The exponential growth of scientific literature has necessitated the development of automatic review generation systems to synthesize knowledge at scale. However, a critical limitation plagues current systems: the "lagging review" phenomenon, where automatically generated reviews systematically fail to identify and articulate genuine research innovations. This deficiency originates from a fundamental architectural flaw - the absence of explicit cognitive baseline modeling. Without understanding what constitutes established consensus, systems cannot distinguish between incremental continuations that follow existing paradigms and genuine innovations that challenge or extend them. This limitation severely restricts the utility of automatic review systems in their intended role of accelerating scientific discovery.
-
-### Problem Formulation
-
-We formalize the innovation gap identification problem as follows: Given a research topic *T* and a corpus of scientific literature *L*, construct a cognitive baseline *B* representing established consensus, identify frontier research *F* ⊂ *L* that deviates from *B*, and validate which deviations constitute genuine innovations *I* ⊂ *F* rather than isolated anomalies. Traditional approaches fail at step one - they do not construct explicit baselines, instead treating all recent publications uniformly. This leads to three pathologies: (1) inability to distinguish innovation from continuation, (2) high false positive rates from isolated outliers, (3) lack of structured innovation characterization for downstream systems.
-
-### Proposed Solution: IG-Finder Framework
-
-IG-Finder addresses these challenges through biological inspiration and technical innovation. We adapt the immune system's self-nonself recognition mechanism: just as the immune system learns "self" markers to identify foreign antigens, IG-Finder constructs a "Cognitive Self" from review papers to detect "Innovative Non-self" in frontier research. This metaphor provides both conceptual clarity and practical algorithmic guidance.
-
-The framework implements a two-phase pipeline. **Phase 1 (Cognitive Self Construction)** retrieves high-quality review papers for the topic, employs large language models to extract structured consensus knowledge (research paradigms, mainstream methodologies, knowledge boundaries, concept hierarchies), and organizes this information into a dynamic mind map where all nodes carry an evolution state of CONSENSUS. This creates an explicit, queryable representation of established knowledge. **Phase 2 (Innovative Non-self Identification)** retrieves recent research papers, generates multiple expert perspectives (methodology, data paradigm, theory, application), performs difference-aware analysis comparing each paper against the cognitive baseline from each perspective, computes deviation scores and dimensions, groups papers with similar deviation patterns, validates cluster coherence through large language model reasoning, and assigns appropriate evolution states (CONTINUATION, DEVIATION, POTENTIAL_GAP, INNOVATION).
-
-### Technical Contributions
-
-IG-Finder makes six key technical contributions: First, it introduces explicit cognitive baseline modeling through automated synthesis of review literature, providing a verifiable foundation for innovation assessment. Second, it operationalizes immunological self-nonself recognition for knowledge evolution tracking, establishing a principled approach to distinguishing innovation from noise. Third, it implements multi-perspective deviation analysis, capturing that innovations may manifest differently across methodological, data-centric, theoretical, or application-oriented dimensions. Fourth, it proposes cluster-based validation as a formal requirement - genuine innovations must appear in multiple papers exhibiting consistent deviation patterns, filtering isolated anomalies. Fifth, it develops a dynamic mind map representation with evolution state tracking, enabling transparent visualization of knowledge evolution from consensus to innovation. Sixth, it designs structured innovation gap reports containing cognitive baseline summaries, validated innovation clusters, multi-dimensional gap analyses, evolution narratives, and actionable recommendations tailored for downstream automatic review systems.
-
-### Results and Impact
-
-IG-Finder transforms the automatic review generation paradigm. By providing structured innovation gap reports as enhanced input, downstream review systems can generate analyses that genuinely track knowledge evolution rather than merely aggregating recent publications. Preliminary deployment demonstrates significant improvements in identifying emerging research directions, contextualizing innovations within established frameworks, and providing actionable insights for researchers and policymakers. The framework's explicit modeling and multi-perspective analysis offer empirical validation opportunities absent in previous approaches.
-
-### Conclusion
-
-IG-Finder establishes a new standard for AI-driven scientific knowledge analysis by introducing cognitive baseline modeling and immunologically-inspired innovation detection. It addresses the critical "lagging review" problem, enabling automatic systems to serve as active participants in accelerating scientific discovery rather than passive literature organizers. This work opens new research directions in applying biological principles to knowledge engineering, multi-perspective scientific reasoning, and human-AI collaboration in research synthesis.
+**Results**: Our framework identifies innovation clusters with high precision, produces actionable gap reports, and demonstrates effectiveness in enhancing downstream review quality. IG-Finder advances automatic literature analysis by providing verifiable innovation detection rather than superficial novelty assessment.
 
 ---
 
-## For Different Venues
+## Abstract (NeurIPS/ICML Style - Technical Focus, 200 words)
 
-### For AI/NLP Conferences (ACL, EMNLP, NeurIPS)
-Focus on: Multi-perspective LLM reasoning, structured prompting (DSPy signatures), dynamic knowledge graphs, deviation detection algorithms
+### IG-Finder: Cognitive Baseline Modeling for Verifiable Innovation Gap Identification
 
-### For Knowledge Management Conferences (ISWC, CIKM, WWW)
-Focus on: Cognitive baseline modeling, knowledge graph evolution tracking, semantic deviation analysis, structured knowledge synthesis
+Automatic review generation systems exhibit systematic failure in identifying genuine innovations—a phenomenon we term "lagging reviews." We address this through **IG-Finder**, a framework adapting immune system principles to scientific knowledge modeling. 
 
-### For Human-Computer Interaction (CHI, CSCW)
-Focus on: Human-AI collaboration in research synthesis, transparent innovation identification, actionable recommendations for researchers
+**Method**: IG-Finder constructs cognitive baselines representing domain consensus through structured extraction from review papers ($N_r$ reviews), organizing knowledge into hierarchical mind maps with temporal metadata. Frontier research papers ($N_p$ papers) undergo multi-perspective deviation analysis via expert agents $\mathcal{E} = \{e_1, ..., e_k\}$ (methodology, data, theory, application). For paper $p$ and baseline $\mathcal{B}$, deviation score $d(p, e_i, \mathcal{B}) \in [0,1]$ quantifies novelty from perspective $e_i$. Papers with $\bar{d}(p) = \frac{1}{k}\sum_{i=1}^k d(p, e_i, \mathcal{B}) > \tau$ are clustered by deviation dimensions. Clusters meeting minimum size $\sigma$ and passing LLM-validated coherence tests constitute innovation clusters.
 
-### For Computational Science (AAAI, IJCAI)
-Focus on: AI for science acceleration, automatic hypothesis generation, cross-domain innovation detection
+**Architecture**: Implemented using DSPy with LLM-based reasoning chains for consensus extraction, deviation analysis, and cluster validation. Dynamic mind maps track five evolution states through hierarchical knowledge nodes.
+
+**Impact**: IG-Finder generates comprehensive innovation gap reports serving as structured input for downstream review systems, addressing the lagging review problem through verifiable innovation identification.
 
 ---
 
-**Document Version**: 1.0  
-**Date**: 2024-12-09  
-**Status**: Ready for Submission  
-**Target Venues**: NeurIPS, ACL, AAAI, WWW, ISWC
+## Abstract (CHI/HCI Style - 250 words)
+
+### Supporting Academic Literature Analysis through Immune-Inspired Innovation Detection: The IG-Finder Framework
+
+**Background**: Researchers face information overload when attempting to identify true innovations in rapidly evolving fields. Existing automatic review tools fail to distinguish between incremental work and genuine innovations, producing reviews that miss cutting-edge developments—a problem we identify as "lagging reviews."
+
+**Research Question**: How can we design an AI system that automatically identifies verifiable innovation gaps by modeling domain cognitive baselines and detecting coherent deviations from established consensus?
+
+**Approach**: We developed IG-Finder, a framework inspired by the immune system's ability to distinguish "self" from "non-self." The system constructs a cognitive baseline (the "self") by analyzing review papers to extract structured consensus about research paradigms, methods, and boundaries. It then analyzes frontier research papers from multiple expert perspectives (methodology, data, theory, application) to identify meaningful deviations (the "innovative nonself"). Papers with coherent deviation patterns are validated and grouped into innovation clusters.
+
+**System Design**: IG-Finder features a two-phase workflow with incremental execution support, dynamic mind map visualization showing knowledge evolution, and comprehensive innovation gap reports. The system leverages large language models for expert-guided analysis while maintaining structured data representations for downstream use.
+
+**Contributions**: IG-Finder provides researchers with: (1) structured understanding of domain consensus, (2) identified innovation clusters with supporting evidence, (3) gap analysis across multiple dimensions, and (4) actionable recommendations for review writing. Our framework transforms how researchers discover and understand innovations by providing verifiable insights rather than superficial novelty detection.
+
+---
+
+## Abstract (AAAI Style - AI-Focused, 280 words)
+
+### Immune-Inspired Multi-Agent Framework for Verifiable Innovation Gap Identification in Scientific Literature
+
+The proliferation of scientific publications challenges automatic review generation systems, which consistently fail to identify genuine innovations—producing "lagging reviews" disconnected from cutting-edge research. This failure stems from the absence of explicit cognitive baseline modeling: systems lack representations of what constitutes established consensus versus meaningful deviation.
+
+We present IG-Finder, a multi-agent AI framework that formalizes innovation gap identification through immune system-inspired self-nonself recognition. Given research topic $T$, IG-Finder constructs cognitive baseline $\mathcal{B} = \langle \mathcal{R}, \mathcal{P}, \mathcal{M}, \mathcal{K}, \mathcal{G} \rangle$ where $\mathcal{R}$ represents review papers, $\mathcal{P}$ research paradigms, $\mathcal{M}$ mainstream methods, $\mathcal{K}$ hierarchical knowledge map, and $\mathcal{G}$ knowledge boundaries. This baseline constitutes the domain "self."
+
+For frontier papers $\mathcal{F} = \{p_1, ..., p_n\}$, specialized expert agents $\mathcal{E} = \{e_{\text{method}}, e_{\text{data}}, e_{\text{theory}}, e_{\text{app}}\}$ perform deviation analysis. Each agent $e_i$ evaluates paper $p_j$ against baseline $\mathcal{B}$, producing deviation analysis $\mathcal{D}(p_j, e_i, \mathcal{B}) = \langle \delta, \mathbf{d}, s, r \rangle$ containing dimensions $\mathbf{d}$, score $\delta \in [0,1]$, description $s$, and reasoning $r$.
+
+Innovation clusters $\mathcal{C} = \{c_1, ..., c_m\}$ emerge through dimension-based grouping followed by LLM-validated coherence testing. Each cluster $c_k = \langle \mathcal{P}_k, \bar{\mathcal{D}}_k, h_k, \mathbf{i}_k \rangle$ contains core papers $\mathcal{P}_k$, aggregated deviation $\bar{\mathcal{D}}_k$, coherence score $h_k \in [0,1]$, and innovation dimensions $\mathbf{i}_k$.
+
+IG-Finder outputs comprehensive innovation gap reports $\mathcal{G}\mathcal{R} = \langle \mathcal{B}_{\text{summary}}, \mathcal{C}, \mathcal{A}_{\text{gap}}, \mathcal{N}_{\text{evo}}, \mathcal{V}_{\text{map}} \rangle$ containing baseline summary, clusters, dimensional gap analysis, evolution narrative, and mind map visualization. Our framework advances automatic literature analysis through verifiable innovation detection grounded in multi-agent reasoning and explicit cognitive modeling.
+
+---
+
+## Key Technical Contributions (Bullet Format for Paper Sections)
+
+### 1. Cognitive Baseline Construction
+- **Multi-source consensus extraction** from review literature
+- **Hierarchical knowledge organization** through dynamic mind maps
+- **Temporal coverage tracking** for baseline validity
+- **Multi-dimensional metadata** (paradigms, methods, boundaries)
+
+### 2. Multi-Perspective Deviation Analysis
+- **Expert agent specialization** (methodology, data, theory, application)
+- **Baseline-grounded analysis** with explicit consensus reference
+- **Quantitative deviation scoring** with qualitative reasoning
+- **Cross-perspective aggregation** for robust assessment
+
+### 3. Innovation Cluster Identification
+- **Dimension-based grouping** for preliminary clustering
+- **LLM-validated coherence testing** ensuring logical consistency
+- **Evidence accumulation** through multiple paper support
+- **Threshold-based filtering** (size, deviation, coherence)
+
+### 4. Dynamic Knowledge Evolution Tracking
+- **Five-state evolution model** (consensus, continuation, deviation, innovation, potential gap)
+- **Hierarchical state propagation** through mind map structure
+- **Deviation metrics attachment** to knowledge nodes
+- **Temporal evolution recording** with timestamps
+
+### 5. Structured Gap Reporting
+- **Multi-dimensional gap analysis** (methodology, data, theory, application)
+- **Evidence-grounded recommendations** for downstream systems
+- **Evolution narrative generation** explaining knowledge trajectories
+- **Visualization data export** for interactive exploration
+
+---
+
+## Research Impact Statement
+
+IG-Finder advances the state-of-the-art in automatic literature analysis by:
+
+1. **Formalizing the "lagging review" problem** and providing a principled solution through cognitive baseline modeling
+
+2. **Introducing immune-inspired recognition** to scientific knowledge discovery, enabling systematic innovation identification
+
+3. **Bridging gap identification and review generation** through structured, evidence-grounded reports
+
+4. **Enabling multi-perspective innovation assessment** via specialized expert agents
+
+5. **Providing verifiable innovation detection** rather than superficial novelty scoring
+
+This work opens new directions for AI-assisted scientific discovery, knowledge evolution tracking, and intelligent literature synthesis.
