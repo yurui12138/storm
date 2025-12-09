@@ -22,7 +22,22 @@ pip install -e .
 
 ## Setup API Keys
 
-Create a `secrets.toml` file in the project root or set environment variables:
+### Option 1: Using Tavily Search (Recommended)
+
+Tavily provides faster and more accurate search results:
+
+```bash
+# Tavily API (recommended)
+export TAVILY_API_KEY="your_tavily_api_key"
+
+# OpenAI API
+export OPENAI_API_KEY="your_openai_api_key"
+
+# Optional: Custom OpenAI proxy (e.g., yunwu.ai)
+export OPENAI_API_BASE="https://yunwu.ai/v1"
+```
+
+### Option 2: Using Bing or You.com
 
 ```bash
 # OpenAI API (required for GPT models)
@@ -35,6 +50,28 @@ export YDC_API_KEY="your_you_api_key"  # for You.com
 ```
 
 ## Basic Usage
+
+### Quick Start with Tavily (Recommended)
+
+For the fastest experience with pre-configured settings:
+
+```bash
+# Quick start with default topic
+python examples/ig_finder_examples/quick_start_yunwu.py
+
+# Or specify your own topic
+python examples/ig_finder_examples/quick_start_yunwu.py \
+    --topic "your research topic"
+```
+
+### Using Tavily Search with Custom Settings
+
+```bash
+python examples/ig_finder_examples/run_ig_finder_tavily.py \
+    --topic "automatic literature review generation" \
+    --output-dir ./output/auto_review \
+    --model gpt-4o
+```
 
 ### Using GPT Models with Bing Search
 
